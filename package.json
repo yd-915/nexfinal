@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+      "dev": "run-p dev:**",
+    "dev:server": "nodemon index.js",
+    "dev:app": "cd client && npm start",
+    "build:app": "cd client && npm run build",
     "start": "node index.js",
-    "server": "nodemon index.js",
-    "build": "cd client && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
 
   },
